@@ -1,0 +1,244 @@
+/* Non essential CSS - Just for example centering */
+.sliders_chua{
+    position: relative;
+}
+
+.text_slider{
+    position: absolute;
+    z-index: 100000;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.center-outer {
+display: table;
+width: 100%;
+
+}
+
+@media screen and (max-width:768px){
+    .mySwiper1{
+        max-height: 400px !important;
+    }
+}
+
+@media screen and (min-width:768px){
+    .mySwiper1{
+        max-height: 500px !important;
+    }
+}
+
+@media screen and (max-width:567px){
+    .mySwiper1{
+        max-height: 300px !important;
+    }
+}
+
+.center-inner {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+}
+
+/* Essential CSS - Makes the effect work */
+
+.bubbles {
+display: inline-block;
+font-family: arial;
+position: relative;
+}
+
+.bubbles .bubbles_chu {
+position: relative;
+font-weight: 700;
+margin: 1em 0 0;
+font-family: 'Luckiest Guy', cursive;
+color: #c7ee89;
+z-index: 2;
+}
+
+@media screen and (max-width:400px) {
+    .text_slider{
+        top: 25% !important;
+    }
+
+    .bubbles .bubbles_chu{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .bubbles .bubbles_chu{
+        font-size: 20px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .bubbles .bubbles_chu{
+        font-size: 35px;
+        width: 400px;
+    }
+}
+
+.individual-bubble {
+position: absolute;
+border-radius: 100%;
+bottom: 10px;
+background-color: #8cb54a;
+z-index: 1;
+}   
+
+.button_mua_ngay{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button_mua_ngay a{
+    border: #008000 2px solid;
+    padding: 5px 10px;
+    color: #008000 !important;
+    background-color: #b7c7d0;
+}
+
+.button_mua_ngay:hover a{
+    background-color:#21a8f6;
+    color: #fff !important;
+}
+/* ------------------slider_chữ------------------------ */
+.slider_chu{
+    background-color: #b7c7d0;
+}
+/* ---------------------------------------------------- */
+
+/* ------------------slider_3------------------------ */
+.the_dich{
+    padding: 10px;
+    background-color: #fff;
+    color: #b7c7d0;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    padding: 20px;
+    background-color: #fff;
+    color: #b7c7d0;
+}
+
+.can_chia{
+    display: flex;
+}
+
+.the_cn_np{
+    display: flex;
+    padding: 20px;
+}
+
+.the_can_chia{
+    display: flex;
+}
+/* ---------------------------------------------------- */
+
+/* ------------------footer---------------------------- */
+.footer{
+    margin: 30px 0;
+}
+
+.tt_cung_cap{
+    color: rgb(73, 73, 73);
+    margin: 20px 0;
+}
+
+.hang_db{
+    display: flex;
+}
+
+.gmail_link_hdb a{
+    color: rgb(159, 159, 159);
+}
+
+.vitri_web{
+    display: flex;
+}
+
+.vitri_web i{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.gmail_link_hdb{
+    margin-right: 20px;
+}
+
+.text_trang_web{
+    margin-right: 20px;
+}
+
+.name_chinh{
+    margin-bottom: 30px;
+}
+
+.noi_dung_tt{
+    margin-bottom: 10px;
+}
+
+.link_cac_trang_mang_xa_hoi{
+    display: flex;
+    margin: 10px 0;
+}
+
+.trang_mxh{
+    margin-right: 10px;
+}
+
+.link_menu{
+    margin-bottom: 5px;
+}
+
+.nhap_mail{
+    margin: 10px 0;
+}
+
+.nhap_mail button{
+    padding: 1px 5px;
+    background-color: #b7c7d0;
+    color: #fff;
+    border: none;
+}
+
+.border_footer{
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:992px){
+    .border_footer{
+        border-right: 1px solid #e2e8eb;
+    }
+}
+
+@media screen and (min-width:576px) and  (max-width:992px){
+    .border_footer2{
+        border-right: 1px solid #e2e8eb;
+    }
+}
+
+@media screen and (max-width:576px){
+    .border_footer{
+        text-align: left !important;
+    }
+}
+
+.bd_bt_ft{
+    border-bottom: 1px solid #e2e8eb;
+}
+
+.ban_quyen{
+    margin: 20px 0;
+}
+
+.anh_thuong_hieu{
+    margin: 20px 0;
+}
+/* ---------------------------------------------------- */

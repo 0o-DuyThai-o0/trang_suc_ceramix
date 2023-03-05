@@ -1,0 +1,446 @@
+<!-- ----------------------dvctxm---------------------- -->
+<div class="container">
+    <div class="dvctxm">
+      <h3>
+        <div class="dvctxm_h1_p1">
+          <?php home_field($all_field_home,3); ?>
+        </div>
+        
+        <div class="dvctxm_h1_p2">
+          <?php home_field($all_field_home,4); ?>
+
+        </div>
+      </h3>
+
+      <div class="tt_dvctxm">
+        <?php home_field($all_field_home,5); ?>
+      </div>
+
+      <div class="ud_dvctxm">
+        <li><a href="#tt_ctxmodn"><i><b><?php home_field($all_field_home,8); ?></b></i></a></li>
+        <li><a href="#tt_bgdvtxmdntnb"><i><b><?php home_field($all_field_home,10); ?></b></i></a></li>
+        <li><a href="#tt_nttctktxmdntnb"><i><b><?php home_field($all_field_home,11); ?></b></i></a></li>
+        <li><a href="#kntxmtdn"><i><b><?php home_field($all_field_home,12); ?></b></i></a></li>
+      </div>	
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- ----------------------ctxmodn--------------------- -->
+  <div class="tt_ctxmodn" id="tt_ctxmodn">
+    <div class="container cnt_con">
+      <h3><?php home_field($all_field_home,7); ?></h3>
+      <div class="row">
+
+	<?php foreach($bat_ca_shbet2 as $lvhd2): ?>
+		<?php foreach($list_articles_cat2 as $list_bv): ?>
+		<?php if($list_bv->product_alias == $lvhd2->product_alias){ ?>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="the_anh_xe">
+            <?php          
+                $img_xs = json_decode($list_bv->image_list);
+                if($img_xs == null){
+                    ?>
+                    <img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+                    <?php }else{
+                    if(isset($img_xs)==true) {
+                    foreach ($img_xs as $img_x) {
+                                                         
+                        ?>
+                    <a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux"></a>
+                    <?php } ?>
+                <?php } ?>
+            <?php } ?>
+         </div>
+
+          <div class="name_xe">
+            <h5><?php echo e($lvhd2->name); ?></h5>
+          </div>
+
+          <div class="tt_xe">
+            <?php echo e($lvhd2->the_gioi_thieu); ?>
+
+          </div>
+		  
+		  <div class="gia_thue_xe">
+            <?php echo e($lvhd2->the_tu_khoa); ?>
+
+          </div>
+
+          <button class="enter_lh">
+            Liên hệ
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+		<?php } ?>
+		<?php endforeach; ?>
+    <?php endforeach; ?>
+	</div>
+	</div>
+	</div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- ----------------------ctxmodn--------------------- -->
+  <div class="tt_ctxtgdn" id="tt_ctxtgdn">
+    <div class="container cnt_con">
+      <h3><?php home_field($all_field_home,9); ?></h3>
+      <div class="row">
+        <?php foreach($bat_ca_shbet2 as $lvhd2): ?>
+		<?php foreach($list_articles_cat2 as $list_bv): ?>
+		<?php if($list_bv->product_alias == $lvhd2->product_alias){ ?>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+          <div class="the_anh_xe">
+            <?php          
+                $img_xs = json_decode($list_bv->image_list);
+                if($img_xs == null){
+                    ?>
+                    <img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+                    <?php }else{
+                    if(isset($img_xs)==true) {
+                    foreach ($img_xs as $img_x) {
+                                                         
+                        ?>
+                    <a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux"></a>
+                    <?php } ?>
+                <?php } ?>
+            <?php } ?>
+         </div>
+
+          <div class="name_xe">
+            <h5><?php echo e($lvhd2->name); ?></h5>
+          </div>
+
+          <div class="tt_xe">
+            <?php echo e($lvhd2->the_gioi_thieu); ?>
+
+          </div>
+		  
+		  <div class="gia_thue_xe">
+            <?php echo e($lvhd2->the_tu_khoa); ?>
+
+          </div>
+
+          <button class="enter_lh">
+            Liên hệ
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+		<?php } ?>
+		<?php endforeach; ?>
+    <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- -------------------bgdvtxmdntnb------------------- -->
+  <div class="tt_bgdvtxmdntnb" id="tt_bgdvtxmdntnb">
+    <div class="container">
+      <h3><?php home_field($all_field_home,13); ?></h3>
+
+      <div class="about_bgdvtxmdntnb">
+		<?php home_field($all_field_home,14); ?>
+      </div>
+    </div>
+
+    <div class="table_tt_bgdvtxmdntnb">
+      <div class="container">
+        <?php home_field($all_field_home,15); ?>
+      </div>
+    </div>
+
+    <div class="ttlh_bgdvtxmdntnb">
+      <div class="container">
+		<?php home_field($all_field_home,16); ?><a href="tel:<?php home_field($all_field_home,17); ?>"><?php home_field($all_field_home,17); ?></a><?php home_field($all_field_home,18); ?>
+	  </div>
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- -------------------nttctktxmdntnb----------------- -->
+  <div class="tt_nttctktxmdntnb" id="tt_nttctktxmdntnb">
+    <div class="container">
+      <div class="name_nttctktxmdntnb">
+        <h3>
+          <?php home_field($all_field_home,19); ?>
+        </h3>
+      </div>
+
+      <div class="ab1_nttctktxmdntnb">
+        <?php home_field($all_field_home,20); ?>
+      </div>
+
+      <div class="lia_nttctktxmdntnb lia">
+		<?php home_field($all_field_home,21); ?>
+        <?php home_field($all_field_home,23); ?>
+        <?php home_field($all_field_home,22); ?>
+      </div>
+
+      <div class="gns">
+        <?php home_field($all_field_home,24); ?> <a href="tel:<?php home_field($all_field_home,25); ?>"><?php home_field($all_field_home,25); ?></a> <?php home_field($all_field_home,26); ?>
+      </div>
+
+      <div class="ab2_nttctktxmdntnb">
+        <?php home_field($all_field_home,27); ?>
+      </div>
+
+      <div class="lia2_nttctktxmdntnb lia">
+		<?php home_field($all_field_home,28); ?>
+        <?php home_field($all_field_home,29); ?>
+      </div>
+    </div>
+  </div>   
+  <!-- -------------------------------------------------- -->
+
+  <!-- ---------------------kntxmtdn--------------------- -->
+  <div class="kntxmtdn" id="kntxmtdn">
+    <div class="container">
+      <div class="tt_kntxmtdn">
+        <h3><?php home_field($all_field_home,30); ?></h3>
+      </div>
+
+      <ul class="nav-mobile_list p-0 m-0 list-unstyled">
+        <li class="border-top"><a href="">
+            <?php home_field($all_field_home,31); ?>
+          </a>
+          <?php home_field($all_field_home,33); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          <?php home_field($all_field_home,32); ?>
+          </a>
+          <?php home_field($all_field_home,34); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          	<?php home_field($all_field_home,35); ?>
+			</a>
+			<?php home_field($all_field_home,36); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          <?php home_field($all_field_home,37); ?>
+		  </a>
+          <?php home_field($all_field_home,38); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          	<?php home_field($all_field_home,39); ?>
+          </a>
+          <?php home_field($all_field_home,40); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          <?php home_field($all_field_home,41); ?>
+          </a>
+          <?php home_field($all_field_home,42); ?>
+        </li>
+
+        <li class="border-top"><a href="">
+          <?php home_field($all_field_home,43); ?>
+          </a>
+          <?php home_field($all_field_home,44); ?>
+        </li>
+      </ul> 
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- --------------------nddxpbktxmodn------------------ -->
+  <div class="nddxpbktxmodn">
+    <div class="container">
+      <div class="name_nddxpbktxmodn">
+        <h4><?php home_field($all_field_home,45); ?></h4>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="img_abc">
+            <?php home_field($all_field_home,46); ?>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="about_abc">
+            <div class="name_ab_abc">
+              <h5><?php home_field($all_field_home,47); ?></h5>
+            </div>
+
+            <div class="tt_ab_abc">
+              <?php home_field($all_field_home,48); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="about_abc">
+            <div class="name_ab_abc">
+              <h5><?php home_field($all_field_home,49); ?></h5>
+            </div>
+
+            <div class="tt_ab_abc">
+              <?php home_field($all_field_home,50); ?>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="img_abc">
+            <?php home_field($all_field_home,51); ?>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="img_abc">
+            <?php home_field($all_field_home,52); ?>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="about_abc">
+            <div class="name_ab_abc">
+              <h5><?php home_field($all_field_home,53); ?></h5>
+            </div>
+
+            <div class="tt_ab_abc">
+              <?php home_field($all_field_home,54); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="about_abc">
+            <div class="name_ab_abc">
+              <h5><?php home_field($all_field_home,55); ?></h5>
+            </div>
+
+            <div class="tt_ab_abc">
+              <?php home_field($all_field_home,56); ?>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="img_abc">
+            <?php home_field($all_field_home,57); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+
+  <!-- --------------------udktxmodnnb------------------- -->
+  <div class="udktxmodnnb">
+    <div class="container">
+      <div class="name_udktxmodnnb">
+        <h3>
+          <?php home_field($all_field_home,58); ?>
+        </h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 haizzz">
+          <div class="the_div_bo_tron">
+            <div class="vong_tron">
+
+            </div>
+          </div>
+
+          <div class="name_cn_the_div_bo_tron">
+            <?php home_field($all_field_home,59); ?>
+          </div>
+
+          <div class="tt_the_div_bo_tron">
+            <?php home_field($all_field_home,60); ?>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 border-left border-right haizzz haizzz2">
+          <div class="the_div_bo_tron">
+            <div class="vong_tron">
+              
+            </div>
+          </div>
+
+          <div class="name_cn_the_div_bo_tron">
+            <?php home_field($all_field_home,61); ?>
+          </div>
+
+          <div class="tt_the_div_bo_tron">
+            <?php home_field($all_field_home,62); ?>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 haizzz">
+          <div class="the_div_bo_tron">
+            <div class="vong_tron">
+              
+            </div>
+          </div>
+
+          <div class="name_cn_the_div_bo_tron">
+            <?php home_field($all_field_home,63); ?>
+          </div>
+
+          <div class="tt_the_div_bo_tron">
+            <?php home_field($all_field_home,64); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->
+  
+  <!-- ---------------------ddtxmtcqdn------------------- -->
+  <div class="ddtxmtcqdn">
+    <div class="container">
+      <div class="name_ddtxmtcqdn">
+        <h3><?php home_field($all_field_home,65); ?></h3>
+      </div>
+
+      <div class="row">
+	  <?php foreach($bat_ca_shbet3 as $lvhd3): ?>
+		<?php foreach($list_articles_cat3 as $list_bv3): ?>
+        <?php if($list_bv3->product_alias == $lvhd3->product_alias){ ?>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="anh_chinh_ddtxmtcqdn">
+				<a href="#">
+					<div class="img_ddtxmtcqdn">
+						<?php          
+							$img_xs = json_decode($list_bv3->image_list);
+							if($img_xs == null){
+								?>
+								<img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+								<?php }else{
+								if(isset($img_xs)==true) {
+								foreach ($img_xs as $img_x) {
+																	 
+									?>
+								<a href="<?php echo e($list_bv3->product_alias); ?>" title="<?php echo e($list_bv3->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv3->name); ?>" class="sondulux"></a>
+								<?php } ?>
+							<?php } ?>
+						<?php } ?>
+					</div>
+					<div class="name_img_ddtxmtcqdn">
+						<?php echo e($lvhd3->the_gioi_thieu); ?>	
+					</div>
+				</a>
+			</div>
+        </div>
+		<?php } ?>
+		<?php endforeach; ?>
+    <?php endforeach; ?>
+	
+      </div>
+    </div>
+  </div>
+  <!-- -------------------------------------------------- -->

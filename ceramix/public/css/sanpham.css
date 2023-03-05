@@ -1,0 +1,54 @@
+.them_vao_gh a{
+    display: flex;
+}
+
+.chon_so_luong_mua_hang{
+    display: flex;
+}
+
+.dat_hang_san_pham{
+    margin: 30px 0;
+}
+
+.ten_sp_dhsp{
+    margin: 20px 0;
+}
+
+.thong_tin_san_pham{
+    margin: 20px 0;
+    color: #696969;
+}
+
+.gia_tien_sp{
+    margin: 10px 0;
+    color: #b7c7d0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.chon_so_luong_mua_hang{
+    margin: 20px 0;
+}
+
+.them_vao_gh{
+    margin-left: 20px;
+    background-color: #b7c7d0;
+    padding: 5px 20px;
+}
+
+.chon_so_luong{
+    margin-top: 5px;
+}
+
+.them_vao_gh a{
+    color: #fff;
+    font-weight: 600;
+}
+
+.them_vao_gh:hover{
+    background-color: #696969;
+}
+
+.dau_cong_{
+    margin-right: 5px;
+}

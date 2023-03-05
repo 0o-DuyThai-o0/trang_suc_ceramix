@@ -1,0 +1,282 @@
+<?php echo $__env->make('site.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php if($cat->id == '584'){ ?>
+	<div class="the_dieu_huong">
+		<div class="container">
+			<b>
+				<a href="/">trang chủ</a> -> <a href="/<?php echo e($cat->cat_alias); ?>"><?php echo $cat->name ?></a>  
+			</b>
+		</div>
+	</div>
+
+	<div class="tin_tuc_du_lich">
+		<div class="container">
+			<div class="name_ttdl">
+				<h3>CATEGORY ARCHIVES: TIN TỨC DU LỊCH</h3>
+			</div>
+
+			<div class="tt_ttdl_ab">
+				Tổng hợp về du lịch Đà Nẵng và những địa phương lân cận. Các địa điểm vui chơi thú vị và những lưu ý được chúng tôi cập nhật sẽ giúp bạn rất nhiều để chinh phục những nẻo đường Đà Nẵng.
+			</div>
+
+			<?php foreach($bat_ca_shbet3 as $lvhd): ?>
+				<?php foreach($list_articles_cat3 as $list_bv): ?>
+				<?php if($list_bv->product_alias ==$lvhd->product_alias){ ?>
+					<div class="chua_the_a">		
+						<div class="row">
+							<a href="<?php echo e($lvhd->product_alias); ?>">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="the_anh_ttdl">
+												<div class="dong_con_anh text-center">
+													<b><?php echo date("d")?></br>
+													Th<?php echo date("m")?></b>
+												</div>
+									
+												<a href="<?php echo e($lvhd->product_alias); ?>">
+													<?php          
+														   $img_xs = json_decode($list_bv->image_list);
+														   if($img_xs == null){
+														   ?>
+														 <img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+														 <?php }else{
+														   if(isset($img_xs)==true) {
+																 foreach ($img_xs as $img_x) {
+																 
+														   ?>
+														 <a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux"></a>
+														 <?php } ?>
+														 <?php } ?>
+														 <?php } ?>
+												 </a>
+											
+											</div>
+										</div>  
+									</a>
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="mota_ttdl">
+												<div class="name_mota_tt">
+													<b>
+														<?php echo e($lvhd->name); ?>
+
+													</b>
+												</div>
+					
+												<div class="about_mota_tt">
+													<?php echo e($lvhd->the_gioi_thieu); ?>	
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php } ?>
+				<?php endforeach; ?>
+			<?php endforeach; ?>	
+			<div class="container">
+				<div class="row">
+					<div class="tablenav top xu_ly_du_lieu_form" style="display:flex; justify-content: center; padding:10px;">
+						<b><?php 	
+							echo $bat_ca_shbet2->render();
+						?></b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php } ?>
+
+<?php if($cat->id == '583'){?>
+	<div class="the_dieu_huong">
+		<div class="container">
+			<b>
+				<a href="/">trang chủ</a> -> <a href="/<?php echo e($cat->cat_alias); ?>"><?php echo $cat->name ?></a>  
+			</b>
+		</div>
+	</div>
+
+	<div class="tin_tuc_du_lich">
+		<div class="container">
+			<div class="name_ttdl">
+				<h3>CATEGORY ARCHIVES: TIN TỨC DU LỊCH</h3>
+			</div>
+
+			<div class="tt_ttdl_ab">
+				Tổng hợp về du lịch Đà Nẵng và những địa phương lân cận. Các địa điểm vui chơi thú vị và những lưu ý được chúng tôi cập nhật sẽ giúp bạn rất nhiều để chinh phục những nẻo đường Đà Nẵng.
+			</div>
+
+			<?php foreach($bat_ca_shbet2 as $lvhd): ?>
+				<?php foreach($list_articles_cat2 as $list_bv): ?>
+				<?php if($list_bv->product_alias ==$lvhd->product_alias){ ?>
+					<div class="chua_the_a">		
+						<div class="row">
+							<a href="<?php echo e($lvhd->product_alias); ?>">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="the_anh_ttdl">
+												<div class="dong_con_anh text-center">
+													<b><?php echo date("d")?></br>
+													Th<?php echo date("m")?></b>
+												</div>
+									
+												<a href="<?php echo e($lvhd->product_alias); ?>">
+													<?php          
+														   $img_xs = json_decode($list_bv->image_list);
+														   if($img_xs == null){
+														   ?>
+														 <img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+														 <?php }else{
+														   if(isset($img_xs)==true) {
+																 foreach ($img_xs as $img_x) {
+																 
+														   ?>
+														 <a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux"></a>
+														 <?php } ?>
+														 <?php } ?>
+														 <?php } ?>
+												 </a>
+											
+											</div>
+										</div>  
+									</a>
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="mota_ttdl">
+												<div class="name_mota_tt">
+													<b>
+														<?php echo e($lvhd->name); ?>
+
+													</b>
+												</div>
+					
+												<div class="about_mota_tt">
+													<?php echo e($lvhd->the_gioi_thieu); ?>	
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php } ?>
+				<?php endforeach; ?>
+			<?php endforeach; ?>	
+			<div class="container">
+				<div class="row">
+					<div class="tablenav top xu_ly_du_lieu_form" style="display:flex; justify-content: center; padding:10px;">
+						<b><?php 	
+							echo $bat_ca_shbet2->render();
+						?></b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php } ?>
+
+<?php if($cat->id == '582'){?>
+	<div class="the_dieu_huong">
+		<div class="container">
+			<b>
+				<a href="/">trang chủ</a> -> <a href="/<?php echo e($cat->cat_alias); ?>"><?php echo $cat->name ?></a>  
+			</b>
+		</div>
+	</div>
+
+	<div class="tin_tuc_du_lich">
+		<div class="container">
+			<div class="name_ttdl">
+				<h3>CATEGORY ARCHIVES: TIN TỨC DU LỊCH</h3>
+			</div>
+
+			<div class="tt_ttdl_ab">
+				Tổng hợp về du lịch Đà Nẵng và những địa phương lân cận. Các địa điểm vui chơi thú vị và những lưu ý được chúng tôi cập nhật sẽ giúp bạn rất nhiều để chinh phục những nẻo đường Đà Nẵng.
+			</div>
+
+			<?php foreach($bat_ca_shbet as $lvhd): ?>
+				<?php foreach($list_articles_cat as $list_bv): ?>
+				<?php if($list_bv->product_alias ==$lvhd->product_alias){ ?>
+					<div class="chua_the_a">		
+						<div class="row">
+							<a href="<?php echo e($lvhd->product_alias); ?>">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="the_anh_ttdl">
+												<div class="dong_con_anh text-center">
+													<b><?php echo date("d")?></br>
+													Th<?php echo date("m")?></b>
+												</div>
+									
+												<a href="<?php echo e($lvhd->product_alias); ?>">
+													<?php          
+														   $img_xs = json_decode($list_bv->image_list);
+														   if($img_xs == null){
+														   ?>
+														 <img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+														 <?php }else{
+														   if(isset($img_xs)==true) {
+																 foreach ($img_xs as $img_x) {
+																 
+														   ?>
+														 <a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux"></a>
+														 <?php } ?>
+														 <?php } ?>
+														 <?php } ?>
+												 </a>
+											
+											</div>
+										</div>  
+									</a>
+								</div>
+
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 border-right huhu">
+									<a href="<?php echo e($lvhd->product_alias); ?>" title="<?php echo e($lvhd->name); ?>">
+										<div class="all_the">
+											<div class="mota_ttdl">
+												<div class="name_mota_tt">
+													<b>
+														<?php echo e($lvhd->name); ?>
+
+													</b>
+												</div>
+					
+												<div class="about_mota_tt">
+													<?php echo e($lvhd->the_gioi_thieu); ?>	
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</a>
+						</div>
+					</div>
+				<?php } ?>
+				<?php endforeach; ?>
+			<?php endforeach; ?>	
+			<div class="container">
+				<div class="row">
+					<div class="tablenav top xu_ly_du_lieu_form" style="display:flex; justify-content: center; padding:10px;">
+						<b><?php 	
+							echo $bat_ca_shbet->render();
+						?></b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php } ?>
+
+<?php echo $__env->make('site.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

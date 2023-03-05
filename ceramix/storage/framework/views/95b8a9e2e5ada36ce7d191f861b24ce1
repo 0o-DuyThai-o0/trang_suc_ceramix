@@ -1,0 +1,224 @@
+<!-- -------------------------slider_chữ--------------------------- -->
+<div class="slider_chu">
+  <div class="sanphambanchay">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12" style="padding: 30px 0;">
+              <div class="slider">
+                <div class="swiper mySwiper3 the_can_chia">
+                    <div class="the_cn_np">
+                      <div class="swiper-button-prev">
+                        
+                      </div>
+
+                      <div class="swiper-button-next">
+                    
+                      </div>
+                    </div>
+
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu1.png" alt="">
+                      </div>
+          
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu2.png" alt="">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu3.png" alt="">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu4.png" alt="">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu5.png" alt="">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu1.png" alt="">
+                      </div>
+
+                      <div class="swiper-slide">
+                        <img src="/public/img/chu2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+              
+                  <!-- Swiper JS -->
+                  <script src="/public/js/swiper-bundle.min.js"></script>
+                  <Script src="/public/js/index2.js"></Script>
+                  <!-- Initialize Swiper -->
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>  
+<!-- -------------------------------------------------------------- -->
+
+<!-- ---------------------------footer----------------------------- -->
+<div class="footer">
+  <div class="container">
+    <div class="row bd_bt_ft">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 border_footer">
+        <div class="tt_cung_cap">
+          <div class="name_chinh">
+            <b><?php home_field($all_field_home,24); ?></b>
+          </div>
+
+          <div class="noi_dung_tt">
+            <?php home_field($all_field_home,25); ?>
+          </div>
+
+          
+          <div class="hang_db">
+            <div class="gmail_link_hdb">
+              <a href="<?php home_field($all_field_home,26); ?>"><?php home_field($all_field_home,26); ?></a>
+            </div>
+
+            <div class="text_trang_web">
+				<a href="url(<?php home_field($all_field_home,27); ?>)">
+				  <?php home_field($all_field_home,27); ?>
+				</a>
+            </div>
+
+            <div class="vitri_web">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="ten_vtw">
+                  <?php home_field($all_field_home,28); ?>
+              </div>
+            </div>
+          </div>
+
+          <div class="link_cac_trang_mang_xa_hoi">
+            <div class="trang_mxh">
+              	<?php home_field($all_field_home,29); ?>
+            </div>
+
+            <div class="trang_mxh">
+              <?php home_field($all_field_home,30); ?>
+            </div>
+
+            <div class="trang_mxh">
+              <?php home_field($all_field_home,31); ?>
+            </div>
+
+            <div class="trang_mxh">
+              <?php home_field($all_field_home,32); ?>
+            </div>
+
+            <div class="trang_mxh">
+              <?php home_field($all_field_home,33); ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 text-center border_footer border_footer2">
+        <div class="tt_cung_cap">
+          <div class="name_chinh">
+            <b><?php home_field($all_field_home,34); ?></b>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,35); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,36); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,37); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,38); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,39); ?></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 text-center border_footer border_footer">
+        <div class="tt_cung_cap">
+          <div class="name_chinh">
+            <b><?php home_field($all_field_home,40); ?></b>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,41); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,42); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,43); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,44); ?></a>
+          </div>
+
+          <div class="link_menu">
+            <a href="#"><?php home_field($all_field_home,45); ?></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">  
+        <div class="tt_cung_cap">
+          <div class="name_chinh">
+            <b><?php home_field($all_field_home,46); ?></b>
+          </div>
+
+          <div class="noi_dung_tt">
+            <?php home_field($all_field_home,47); ?>
+          </div>
+
+          <div class="nhap_mail">
+            <input type="mail">
+            <button>
+              <?php home_field($all_field_home,48); ?>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------------------------------------------- -->
+
+<!-- -------------------------footer2------------------------------ -->
+<div class="footer2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+        <div class="ban_quyen">
+          <?php home_field($all_field_home,49); ?> <b><a href="#"><?php home_field($all_field_home,50); ?></a></b>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="thuong_hieu_lk">
+          <div class="anh_thuong_hieu">
+            <img src="/public/img/thuong_hieu.jpg" alt="" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- -------------------------------------------------------------- -->
+</body>
+</html>
+
+<script src="./public/js/jquery.min(jq_1.7.2).js" type="text/javascript"></script> 

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if(isset($product)){?> <title><?php echo $product->name; ?></title>
+    <meta name="keywords" content="<?php echo $product->the_tu_khoa; ?>" /> 
+	<meta property="og:description" content="<?php echo $product->the_gioi_thieu; ?>" />
+	<?php 
+         }else if(isset($cat)) {
+		  
+		  echo " 
+						<title>".$cat->name."</title>";
+         ?>
+    <meta name="keywords" content="<?php echo $cat->content_cat;?>" />
+    <meta property="og:description" content="<?php echo $cat->excerpt_cat?>" /> <?php
+         }else {
+			 if(isset($title)) {
+         echo "<title>".$title."</title>";
+         }}  ?>
+    <title>CERAMIX</title>
+
+        <link rel="stylesheet" href="./public/css/bootstrap.min.css">  
+        <link rel="stylesheet" href="./public/css/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="./public/css/text_slider.css">
+        <link rel="stylesheet" href="./public/css/index.css">
+		<link rel="stylesheet" href="./public/css/danhmucsanpham.css">
+        <link rel="stylesheet" href="./public/css/sanpham.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="./public/js/jquery.slim.min.js"></script>
+        <script src="./public/js/bootstrap.min.js"></script>
+        <script src="./public/js/jquery2.2.2.js"></script>
+    
+</head>
+<body>
+    <!-- ------------------------hedader------------------------------- -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 mobi_an2">
+                    <div class="the_chung_dau d-flex">
+                      <div class="the_menu_phu_n mr-3">
+                        <ul class="phan_san_pham list-unstyled text-uppercase">
+                          <li class="nav-item dropdown">
+                            <div class="the_icon">
+                              <i class="fa-solid fa-bars"></i>
+                            </div>
+                              <ul class="phan_san_pham_con dropdown-menu d-none list-unstyled text-uppercase m-0">
+                                  <ul class="nav-mobile_list p-0 m-0 list-unstyled">
+                                            <?php
+                
+                                              foreach ($menu_top_2 as $value) {
+                                              $jsons=json_decode($value->content,1);
+                                              }  
+                                              //  var_dump($jsons); 
+                                              showCategories_menu_top_one_header($jsons,'');
+                                            ?>
+											
+                                            <li class="border-bottom"><a href="./mycart">
+                                              <i class="fa-solid fa-cart-shopping"></i>
+                                              Giỏ hàng
+                                            </a></li>
+                                          </ul>
+                              </ul>
+                          </li>
+                        </ul>
+                      </div>
+  
+                      <div class="logo_menu mt-2">	
+                        <a href="./"><img src="./public/img/logo.png" alt=""></a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+                    <div class="menu">
+                        <div class="menu_tong">
+                            <div class="container hihi">
+                              <div class="menu_ctn d-flex">
+                                <ul class="d-flex list-unstyled">	
+								
+                                    <?php
+                                      foreach ($menu_top as $value) {
+                                        $jsons=json_decode($value->content,1);
+                                      }  	
+                                      //  var_dump($jsons); 
+                                      showCategories_menu_top_one_header($jsons,'');
+                                    ?>
+                           
+                                </ul>
+                              </div>
+                            </div>
+                            
+                            <div class="container-fluid d-lg-none haha">  
+                              <div class="row d-flex align-items-center">
+                                <label for="input-check" class="icon-menu pl-0">
+                                  <i class="fa-solid fa-bars"></i>
+                                </label>
+                                <input type="checkbox" class="input-mobile d-none" id="input-check">
+                                <label for="input-check" class="nav-overlay"></label>
+                      
+                                <div class="logo_menu mx-auto">
+                                  <a href="./"><img src="./public/img/logo.png" alt=""></a>
+                                </div>
+                      
+                                <div class="nav-mobile py-5">
+                                  <label for="input-check" class="nav-mobile_close">
+                                    <i class="fa-solid fa-xmark"></i>
+                                  </label>
+                      
+                                  <div class="logo_menu align-items-center logo_trong_x">
+                                    <img src="./public/img/logo.png" alt="">
+                                  </div>
+                                  
+                                  <div class="form_menu_phu_1">
+                                    <?php echo Form::open(array('method' => 'POST','action' => array('Site\SanphamController@form__input_search',Request::input('form__input_search')))); ?>
+
+                                      <input type="text" required class="header__input" name="form__input_search" placeholder="Bạn cần tìm gì?"
+                                      value="<?php if(isset($form__input_search)) echo $form__input_search ; ?>">
+                                      <button class="header__input-icon">
+                                        <i class="fa-solid fa-magnifying-glass header__input-icon-link"></i>
+                                      </button>
+                                    <?php echo Form::close(); ?>
+
+                                  </div>
+                                  
+                                          <ul class="nav-mobile_list p-0 m-0 list-unstyled">
+                                            <?php
+                
+                                              foreach ($menu_top as $value) {
+                                              $jsons=json_decode($value->content,1);
+                                              }  
+                                              //  var_dump($jsons); 
+                                              showCategories_menu_top_mobile_header($jsons,'');
+                                            ?>
+											
+                                            <li class="border-bottom">
+                                              <a href="./mycart">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                Giỏ hàng
+
+                                              </a>
+                                            </li>
+                                          </ul>
+                                    
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-3 col-lg-2">
+                    <div class="the_chuc_nang d-flex">
+                        <div class="search an_not">
+                            <ul class="menu_search list-unstyled text-uppercase">	
+                                <li class="nav-item dropdown position-relative menu_search">
+                                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                  </a>
+                                  <ul class="menu_search_con dropdown-menu d-none list-unstyled text-uppercase m-0" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <div class="form_menu_phu_1">
+                                          <?php echo Form::open(array('method' => 'POST','action' => array('Site\SanphamController@form__input_search',Request::input('form__input_search')))); ?>
+
+                                            <input type="text" required class="header__input" name="form__input_search" placeholder="Bạn cần tìm gì?"
+                                            value="<?php if(isset($form__input_search)) echo $form__input_search ; ?>">
+                                            <button class="header__input-icon">
+                                              <i class="fa-solid fa-magnifying-glass header__input-icon-link"></i>
+                                            </button>
+                                          <?php echo Form::close(); ?>
+
+                                        </div>
+                                    </li>
+                                  </ul>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="caidat mobi_an">
+                            <ul class="d-flex list-unstyled text-uppercase">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-gear"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="giohang an_not">
+                          <ul class="d-flex list-unstyled text-uppercase">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="./mycart">
+                                  <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------------------------------- -->

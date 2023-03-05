@@ -1,0 +1,399 @@
+ <!-- -----------------------slider--------------------------------- -->
+
+ <div id="banner">
+  <div class="swiper mySwiper1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+		<div class="sliders_chua">
+          <?php home_field($all_field_home,1); ?>	
+
+          <div class="text_slider">
+            <div class="center-outer">
+              <div class="center-inner">
+              
+              <div class="bubbles">
+                <div class="bubbles_chu">
+                  	
+					<?php home_field($all_field_home,3); ?>	
+                </div>
+              </div>
+              
+              </div>
+            </div>
+
+            <div class="button_mua_ngay">
+              <b>
+				<?php
+										foreach ($menu_footer_1 as $value) {
+										  $jsons=json_decode($value->content,1);
+										}  	
+										//  var_dump($jsons); 
+										showCategories_menu_top_one_header($jsons,'');
+				?>
+			  </b>
+            </div>
+          </div>
+		</div>
+      </div>
+      <div class="swiper-slide">
+		<div class="sliders_chua">
+          <?php home_field($all_field_home,2); ?>
+          <div class="text_slider">
+            <div class="center-outer">
+              <div class="center-inner">
+              
+              <div class="bubbles">
+                <div class="bubbles_chu">
+                  <?php home_field($all_field_home,4); ?>
+                </div>
+              </div>
+              
+              </div>
+            </div>
+
+            <div class="button_mua_ngay">
+              <b>
+				<?php
+										foreach ($menu_footer_1 as $value) {
+										  $jsons=json_decode($value->content,1);
+										}  	
+										//  var_dump($jsons); 
+										showCategories_menu_top_one_header($jsons,'');
+				?>
+			  </a>
+            </div>
+          </div>
+		</div>
+      </div>
+    </div>
+    <div class="the_cn_np">
+      <div class="swiper-button-prev">
+        
+      </div>
+
+      <div class="swiper-button-next">
+    
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="./public/js/swiper-bundle.min.js"></script>
+  <Script src="./public/js/index.js"></Script>
+</div>
+<!-- -------------------------------------------------------------- -->
+
+<!-- ------------------Sản phẩm bán chạy--------------------------- -->
+
+<div class="sanphambanchay">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <div class="ten_tieu_de">
+              <div class="tittle">
+                <div class="the_h3">
+                  <h3>
+                    	
+					<?php home_field($all_field_home,5); ?>
+                  </h3>
+                </div>
+
+                <div class="anh_chia_nen d-flex justify-content-center">
+                    	
+					<?php home_field($all_field_home,6); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12">
+            <div class="slider">
+              <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+					<?php foreach($bat_ca_shbet3 as $lvhd): ?>
+						<?php foreach($list_articles_cat3 as $list_bv): ?>
+							<?php if($list_bv->product_alias ==$lvhd->product_alias){ ?>
+								<div class="swiper-slide">
+								  <a href="<?php echo e($lvhd->product_alias); ?>">
+									<div class="the_anh_slider">
+										<?php          
+											$img_xs = json_decode($list_bv->image_list);
+											if($img_xs == null){
+												?>
+												<img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+												<?php }else{
+												if(isset($img_xs)==true) {
+												foreach ($img_xs as $img_x) {
+																					 
+													?>
+												<a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux" style="width:100%;min-height:250px !important;"></a>
+												<?php } ?>
+											<?php } ?>
+										<?php } ?>
+
+									  <a href="<?php echo e($lvhd->product_alias); ?>" class="the_mau_chua">
+
+									  </a>
+									</div>
+									
+
+									<div class="tt_trang_suc" style="text-align:center; width:100%;">
+									  <a href="<?php echo e($lvhd->product_alias); ?>" class="ten_ts" style="text-align:center; width:100%;">
+									  <?php echo e($lvhd->name); ?>
+
+									  </a>
+
+									  <div class="gia_tien">
+										<?php echo e($lvhd->the_gioi_thieu); ?>
+
+									  </div>
+
+									  <div class="them_vao_gio_hang">
+										<a href="<?php echo e($lvhd->product_alias); ?>">
+										  <div class="dau_cong">
+											+
+										  </div>
+
+										  <div class="name_tvgh">
+											THÊM VÀO GIỎ
+										  </div>
+										</a>
+									  </div>
+									</div>
+								  </a>
+								</div>
+							<?php } ?>
+						<?php endforeach; ?>
+					<?php endforeach; ?>	
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+            
+                <!-- Swiper JS -->
+                <script src="./public/js/swiper-bundle.min.js"></script>
+                <Script src="./public/js/index2.js"></Script>
+                <!-- Initialize Swiper -->
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- -------------------------------------------------------------- -->
+
+<!-- -------------------------mota_gt------------------------------ -->
+<div class="mota_gt">
+<div class="container">
+  <div class="row dong_chia_anh">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="margin: 10px 0;">
+      <div class="anh_gt">
+	  <style>.anh_gt img{min-height:250px !important;}</style>
+        <?php home_field($all_field_home,9); ?>
+      </div>
+    </div>
+
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin: 10px 0;">
+      <div class="anh_gt">
+        <?php home_field($all_field_home,10); ?>
+      </div>
+    </div>
+
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin: 10px 0;">
+      <div class="anh_gt">
+        <?php home_field($all_field_home,11); ?>
+      </div>	
+    </div>
+  </div>
+</div>
+</div>
+<!-- -------------------------------------------------------------- -->
+
+<!-- ------------------Sản phẩm nổi bật--------------------------- -->
+
+<div class="sanphambanchay">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <div class="ten_tieu_de">
+              <div class="tittle">
+                <div class="the_h3">
+                  <h3>
+                    	
+					<?php home_field($all_field_home,8); ?>
+                  </h3>
+                </div>
+
+                <div class="anh_chia_nen d-flex justify-content-center">
+                    	
+					<?php home_field($all_field_home,6); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-12">
+            <div class="slider">
+              <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+					<?php foreach($bat_ca_shbet3 as $lvhd): ?>
+						<?php foreach($list_articles_cat3 as $list_bv): ?>
+							<?php if($list_bv->product_alias ==$lvhd->product_alias){ ?>
+								<div class="swiper-slide">
+								  <a href="<?php echo e($lvhd->product_alias); ?>">
+									<div class="the_anh_slider">
+										<?php          
+											$img_xs = json_decode($list_bv->image_list);
+											if($img_xs == null){
+												?>
+												<img src="https://bizweb.dktcdn.net/100/057/112/themes/74363/assets/no-image.jpg?1556185055601" alt="">
+												<?php }else{
+												if(isset($img_xs)==true) {
+												foreach ($img_xs as $img_x) {
+																					 
+													?>
+												<a href="<?php echo e($list_bv->product_alias); ?>" title="<?php echo e($list_bv->name); ?>"><img src="<?php echo $img_x->url;?>" alt="<?php echo e($list_bv->name); ?>" class="sondulux" style="width:100%;min-height:250px !important;"></a>
+												<?php } ?>
+											<?php } ?>
+										<?php } ?>
+
+									  <a href="<?php echo e($lvhd->product_alias); ?>" class="the_mau_chua">
+
+									  </a>
+									</div>
+									
+
+									<div class="tt_trang_suc" style="text-align:center; width:100%;">
+									  <a href="<?php echo e($lvhd->product_alias); ?>" class="ten_ts" style="text-align:center; width:100%;">
+									  <?php echo e($lvhd->name); ?>
+
+									  </a>
+
+									  <div class="gia_tien">
+										<?php echo e($lvhd->the_gioi_thieu); ?>
+
+									  </div>
+
+									  <div class="them_vao_gio_hang">
+										<a href="<?php echo e($lvhd->product_alias); ?>">
+										  <div class="dau_cong">
+											+
+										  </div>
+
+										  <div class="name_tvgh">
+											THÊM VÀO GIỎ
+										  </div>
+										</a>
+									  </div>
+									</div>
+								  </a>
+								</div>
+							<?php } ?>
+						<?php endforeach; ?>
+					<?php endforeach; ?>	
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+            
+                <!-- Swiper JS -->
+                <script src="./public/js/swiper-bundle.min.js"></script>
+                <Script src="./public/js/index2.js"></Script>
+                <!-- Initialize Swiper -->
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- -------------------------------------------------------------- -->
+
+<!-- -------------------trang trí hinh ảnh------------------------- -->
+<div class="trangtri">
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="tthh">
+      <div class="icon_tthh">
+        <?php home_field($all_field_home,12); ?>
+      </div>
+
+      <div class="ttchinh">
+        <div class="td_tthh">
+          <b><?php home_field($all_field_home,13); ?></b>
+        </div>
+
+        <div class="nd_tthh">
+          <?php home_field($all_field_home,14); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="tthh">
+      <div class="icon_tthh">
+        <?php home_field($all_field_home,15); ?>
+      </div>
+
+      <div class="ttchinh">
+        <div class="td_tthh">
+          <b><?php home_field($all_field_home,16); ?></b>
+        </div>
+
+        <div class="nd_tthh">
+          <?php home_field($all_field_home,17); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="tthh">
+      <div class="icon_tthh">
+        <?php home_field($all_field_home,18); ?>
+      </div>
+
+      <div class="ttchinh">
+        <div class="td_tthh">
+          <b><?php home_field($all_field_home,19); ?></b>
+        </div>
+
+        <div class="nd_tthh">
+          <?php home_field($all_field_home,20); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- -------------------------------------------------------------- -->
+
+<!-- -------------------------mota_gt------------------------------ -->
+<div class="mota_gt2">
+<div class="container">
+<div class="row dong_chia_anh">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin: 10px 0;">
+  <style>.anh_gt img{width:100%; min-height: 110px; !important;}</style>
+    <div class="anh_gt">
+      <?php home_field($all_field_home,21); ?>
+    </div>
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin: 10px 0;">
+    <div class="anh_gt">
+      <?php home_field($all_field_home,22); ?>
+    </div>
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin: 10px 0;">
+    <div class="anh_gt">
+      <?php home_field($all_field_home,23); ?>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- -------------------------------------------------------------- -->

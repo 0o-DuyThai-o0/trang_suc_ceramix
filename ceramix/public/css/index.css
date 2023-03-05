@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+body {
+    position: relative;
+    background: #fff;
+    font-size: 14px;
+}
+
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.col{
+    padding: 0 !important;
+}
+
+.navbar{
+    padding: 0 !important;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+:hover a{
+    color: #000;
+    text-decoration: none;
+}
+/* ----------------------hedader--------------------------- */
+.header{
+    margin: 30px 0;
+    height: 40px;
+    z-index: 1000;
+}
+
+.the_menu_phu_n li .the_icon{
+    background-color: #B7C7D0;
+    padding: 10px 20px;
+    height: 40px;
+}
+
+.the_menu_phu_n i{
+    color: #fff;
+}
+
+.phan_san_pham_con li a{
+    font-size: 14px;
+}
+
+.phan_san_pham_con{
+    margin-top: 40px;
+    width: 200px;
+    padding: 15px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+
+.phan_san_pham_con li a{
+    color: #000;
+}
+
+.phan_san_pham_con li{
+    margin: 10px 0;
+}
+
+.phan_san_pham li:hover .phan_san_pham_con{
+    display: block !important;
+}
+
+.menu_ctn ul li>a{
+    font-weight: 700;
+    color: black;
+}
+
+.menu_ctn ul li:hover .menu_phu1{
+    display: block;
+}
+
+.the_menu_con{
+    width: 700px;
+    font-size: 14px;
+}
+
+.ten_dt{
+    margin: 20px 0;
+    color: #B7C7D0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.loai_sp{
+    margin: 10px 0;
+}
+
+.loai_sp a{
+    color: #000;
+}
+
+.anh_con{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:1200px) {
+    .hihi .menu_phu1{
+        margin-left: -200px;
+     }
+}
+
+.menu_phu_search{
+    display: none;
+}
+
+.menu_search li:hover .menu_search_con{
+    display: block !important;
+}
+
+.menu_search_con{
+    padding: 10px;
+    left: -200px;
+}
+
+.menu_search_con li{
+    width: 225px;
+}
+
+.header__input{
+    padding-left: 5px;
+}
+
+.header__input-icon{
+    padding: 0 5px;
+}
+
+@media screen and (max-width:1100px) {
+    .mobi_an{
+        display: none !important;
+    }
+}
+
+/*  */
+.menu{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+.hihi{
+    border-bottom: 1px solid #ccc;
+}
+
+.logo_menu{
+    max-width: 230px;
+}
+
+.logo_menu img{
+    max-width: 100%;
+}
+
+li:hover .menu_phu1{
+    display: block !important;
+}
+
+.form1{         
+    display: flex;
+    width: 200px;
+}
+
+.menu_phu1::before{
+    content: "";
+    border-width: 8px 12px;
+    border-color: transparent transparent rgb(226, 226, 226) transparent;
+    border-style: solid;
+    position: absolute;
+    left: 10px;
+    top:-16px;
+    display: block;
+}
+
+.icon-menu i{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: #ccc solid 1px;
+}
+
+li:hover .menu_phu1{
+    display: block;
+}
+
+@media screen and (max-width:992px) {
+    .hihi{
+        display: none;
+    }
+
+    .mobi_an2{
+        display: none !important;
+    }
+}
+
+.nav-overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: fadeIn linear 2.5s;
+}
+.nav-mobile {
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    padding: 10px 5px;
+    background-color: #f6f5f5;
+    transform: translateX(-100%);
+    transition: transform linear 0.25s;
+}
+
+.nav-mobile_list {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav-mobile_item {
+    padding: 16px;
+    border-top: 1px solid #ddd;
+}
+.nav-mobile_item a {
+    color: #424242;
+}
+.nav-mobile_close {
+    position: absolute;
+    font-size: 16px;
+    margin: 10px;
+    color: red;
+    right: 8px;
+    top: 0;
+}
+.input-mobile:checked ~ .nav-overlay {
+    display: block;
+}
+.input-mobile:checked ~ .nav-mobile {
+    transform: translateX(0);
+}
+
+.haha{
+    border-bottom: #ccc solid 1px;
+}
+
+.haha .logo_menu img{
+    justify-content: center;
+}
+
+.nav-mobile_list li{
+    padding: 10px 0;
+}
+
+.logo_trong_x{
+    margin: 20px 0;
+}
+
+@media screen and (max-width:768px) {
+    .an_not{
+        display: none;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    .menu_ctn>ul>li>a{
+        font-size: 13px !important;
+    }
+}
+/* -------------------------------------------------------- */
+
+/* ------------------Sản phẩm bán chạy--------------------- */
+.sanphambanchay{
+    margin: 30px 0 30px 0;
+}
+.ten_tieu_de{
+    width: 100%;
+    display: flex;  
+    justify-content: center;
+    margin: 50px 0 30px 0;
+}
+
+.them_vao_gio_hang a{
+    display: flex;
+}
+
+.ten_ts{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(104, 104, 104);
+    margin-top: 10px;
+}
+
+.gia_tien{
+    text-align: center;
+    margin: 5px 0;
+    color: red;
+}
+
+.dau_cong{
+    color: #B7C7D0;
+    margin-right: 5px;
+}
+
+.them_vao_gio_hang:hover .dau_cong{
+    color: #000;
+    font-weight: 700;
+}
+
+.name_tvgh{
+    font-weight: 700;
+}
+
+.them_vao_gio_hang {
+    display: flex;
+    justify-content: center;
+}
+
+.the_anh_slider{
+    position: relative;
+}
+
+.the_mau_chua{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 0.4s ease 0s;
+    z-index: 1;
+}
+
+.the_anh_slider:hover .the_mau_chua{
+    display: block;
+    background-color: rgba(178, 212, 232, 0.5);
+}
+/* -------------------------------------------------------- */
+
+/* -----------------------mota_gt-------------------------- */
+.mota_gt{
+    background-color: #f0eee9;
+    padding: 60px 0;
+}
+
+.anh_gt img{
+    max-width: 100%;
+}
+
+.anh_chia_nen img{
+    max-width: 150px;
+}
+/* -------------------------------------------------------- */
+
+.trangtri{
+    background-color: #fad8c9;
+    padding: 40px 0;
+}
+
+.tthh{
+    display: flex;
+    margin: 20px 0;
+}
+
+.icon_tthh{
+    margin-right: 10px;
+}
+
+.icon_tthh:hover img{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+
+.mota_gt2{
+    padding: 50px 0;
+}
+
+@media screen and (max-width:576px){
+    .dong_chia_anh{
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
+}
